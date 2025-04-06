@@ -1,80 +1,25 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>中国传媒大学2024年财务支出表</title>
-    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+    <title>Bilibili 视频嵌入</title>
     <style>
-        #main {
-            width: 600px;
-            height: 400px;
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        iframe {
+            width: 800px;
+            height: 450px;
+            border: none;
         }
     </style>
 </head>
-
 <body>
-    <div id="main"></div>
-    <script type="text/javascript">
-        var option = {
-            xAxis: {
-                type: 'category',
-                boundaryGap: false,
-                data: ['第一季度', '第二季度', '第三季度', '第四季度']
-            },
-            yAxis: {
-                type: 'value',
-                boundaryGap: [0, '30%'],
-                name: '支出金额（万元）'
-            },
-            visualMap: {
-                type: 'piecewise',
-                show: false,
-                dimension: 0,
-                seriesIndex: 0,
-                pieces: [
-                    {
-                        gt: 1,
-                        lt: 3,
-                        color: 'rgba(0, 0, 180, 0.4)'
-                    },
-                    {
-                        gt: 5,
-                        lt: 7,
-                        color: 'rgba(0, 0, 180, 0.4)'
-                    }
-                ]
-            },
-            series: [
-                {
-                    type: 'line',
-                    smooth: 0.6,
-                    symbol: 'none',
-                    lineStyle: {
-                        color: '#5470C6',
-                        width: 5
-                    },
-                    markLine: {
-                        symbol: ['none', 'none'],
-                        label: { show: false },
-                        data: [{ xAxis: 1 }, { xAxis: 3 }]
-                    },
-                    areaStyle: {},
-                    data: [
-                        ['教学', 1000, 1200, 1500, 1300],
-                        ['科研', 800, 900, 1100, 1000],
-                        ['行政', 500, 550, 600, 580],
-                        ['学生活动', 200, 250, 300, 280],
-                        ['校园建设', 1500, 1800, 2000, 1600],
-                        ['设备采购', 700, 850, 900, 800]
-                    ]
-                }
-            ]
-        };
-        var myChart = echarts.init(document.getElementById('main'));
-        myChart.setOption(option);
-    </script>
+    <iframe src="//player.bilibili.com/player.html?bvid=BV1njR6YdE4h&page=1" allowfullscreen></iframe>
 </body>
-
 </html>
