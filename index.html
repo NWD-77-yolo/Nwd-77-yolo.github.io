@@ -1,25 +1,30 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bilibili 视频嵌入</title>
+    <title>特朗普词云图</title>
     <style>
         body {
+            background: #f0f0f0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f4f4f4;
+            margin: 0;
         }
-        iframe {
-            width: 800px;
-            height: 450px;
-            border: none;
+        .photo-container {
+            max-width: 90%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border: 10px solid white;
+        }
+        .photo-container img {
+            display: block;
+            max-width: 100%;
         }
     </style>
 </head>
 <body>
-    <iframe src="//player.bilibili.com/player.html?bvid=BV1njR6YdE4h&page=1" allowfullscreen></iframe>
+    <div class="photo-container">
+        <img src="特朗普词云图.png" alt="特朗普词云图">
+    </div>
 </body>
 </html>
